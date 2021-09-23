@@ -1,0 +1,23 @@
+[user]
+	email = johanlarsson@outlook.com
+	name = Johan Larsson
+[github]
+	user = jolars
+[credential]
+	helper = cache
+[pull]
+	rebase = false
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[core]
+	editor = nvim
+
+[log]
+  date = relative
+[format]
+  pretty = format:%C(auto,yellow)%h%C(auto,magenta)% G? %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(7,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D
+[init]
+	defaultBranch = main
