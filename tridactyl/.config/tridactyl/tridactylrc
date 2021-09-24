@@ -1,0 +1,2 @@
+bind ;Fp composite hint -pipe a href | tabopen -c Personal
+bind gw tabdetach
