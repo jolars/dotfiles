@@ -1,0 +1,15 @@
+profile {
+  output eDP-1 disable
+  output "Dell Inc. DELL U2415 XKV0P06910EL" enable position 1200,360
+  output "Dell Inc. DELL U2415 7MT0181M1C5U" enable position 0,0 transform 90
+}
+
+profile {
+  output eDP-1 disable
+  output DP-5 enable position 1200,360
+  output DP-6 enable position 0,0 transform 90
+}
+
+profile {
+  output eDP-1 enable
+}
