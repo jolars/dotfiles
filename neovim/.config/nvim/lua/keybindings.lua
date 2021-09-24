@@ -155,3 +155,7 @@ map("v", "<leader>f", "<cmd>Format<cr>", silent)
 
 -- Bufferline
 map("n", "gb", "<cmd>BufferLinePick<cr>", silent)
+
+-- Ranger
+map("n", "<leader>rf", "<cmd>Ranger<cr>")
+map("n", "<leader>rw", "<cmd>RangerWorkingDirectory<cr>")
