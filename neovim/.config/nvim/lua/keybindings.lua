@@ -112,13 +112,10 @@ map('n', 'gw', ':ArgWrap<cr>', silent)
 map('n', '<leader>g', '<cmd>vertical Git<cr>', silent)
 
 --  REPL
-map('v', '<leader><leader>', '<Plug>(neoterm-repl-send)', remap)
-map('n', '<leader><leader>', '<Plug>(neoterm-repl-send)', remap)
 map('v', 'gs', '<Plug>(neoterm-repl-send)', remap)
 map('n', 'gs', '<Plug>(neoterm-repl-send)', remap)
-map('n', 'gl', '<Plug>(neoterm-repl-send-line)', remap)
 map('n', 'gss', '<Plug>(neoterm-repl-send-line)', remap)
-map('n', '<leader>rf', '<cmd>treplsendfile<cr>', remap)
+map('n', 'gsf', '<cmd>treplsendfile<cr>', remap)
 
 -- Format
 map('n', '<leader>f', '<cmd>Format<cr>', silent)
