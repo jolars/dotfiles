@@ -144,6 +144,15 @@ ls.snippets = {
       i(0)
     }),
 
+    s("thm", {
+      t({"\\begin{theorem}", "\t\\label{thm:"}),
+      i(1),
+      t({"}", "\t"}),
+      i(2),
+      t({"", "\\end{theorem}", ""}),
+      i(0)
+    }),
+
     s("em", {t("\\emph{"), i(1), t("}"), i(0)}),
 
     s("op", {t("\\operatorname{", i(1), t("}"), i(0))}),
