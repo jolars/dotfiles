@@ -1,0 +1,16 @@
+# vim: filetype=muttrc
+set realname='Johan Larsson'
+
+set sidebar_visible
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats
+
+# Cache
+set mailcap_path = ~/.config/neomutt/mailcap
+set header_cache = "~/.cache/mutt"
+set message_cachedir = "~/.cache/mutt"
+
+# Accounts
+source ~/.config/neomutt/accounts/outlook
+
+
