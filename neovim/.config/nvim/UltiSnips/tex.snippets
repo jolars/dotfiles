@@ -1,0 +1,104 @@
+extends tex-templates
+
+global !p
+def math():
+	return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+def comment():
+	return vim.eval('vimtex#syntax#in_comment()') == '1'
+def env(name):
+	[x,y] = vim.eval("vimtex#env#is_inside('" + name + "')")
+	return x != '0' and x != '0'
+endglobal
+
+snippet ii "Inline math" wA
+\($1\)$0
+endsnippet
+  
+snippet dm "Display Math" 
+\[
+	${1}
+\]
+$0
+endsnippet
+
+snippet dd "Display math" wA
+\[
+	${0}
+\]
+$0
+endsnippet
+
+snippet fig "Figure environment" b
+\begin{figure}[${2:htpb}]
+	\centering
+	\includegraphics[${3}]{${4:name.ext}}
+	\caption{${5}}%
+	\label{fig:${4/(\w+)\.\w+/$1/}}
+\end{figure}
+$0
+endsnippet
+
+snippet cols "Beamer Columns" b
+\begin{columns}
+	\begin{column}[${1:t}]{${2:0.45}\linewidth}
+		$0
+	\end{column}
+\end{columns}
+endsnippet
+
+snippet col "Beamer Column" b
+\begin{column}[${1:t}]{${2:0.45}\linewidth}
+	$0
+\end{column}
+endsnippet
+
+snippet frame "Beamer Frame" b
+\begin{frame}[${1:c}]
+	\frametitle{${2:title}}
+	${0:${VISUAL}}
+\end{frame}
+endsnippet
+
+snippet /\_\_/ "Subscript" riA
+_{$1}$0
+endsnippet
+
+snippet /\^\^/ "Superscript" riA
+^{$1}$0
+endsnippet
+
+snippet begin "begin{} / end{}"
+\begin{${1:name}}
+	${0}
+\end{$1}
+endsnippet
+
+context "math()"
+snippet ,ff "Fraction" iA
+\frac{${1:numer}}{${2:denom}}${0}
+endsnippet
+
+snippet csvtab "Table with csvsimple"
+\begin{table}[hbtp]
+	\caption{${1}}%
+	\label{tab:${2}}
+	\csvreader[
+		tabular={lS[table-format=0.4]},
+		before reading=\centering\sisetup{round-mode=figures, round-precision=3},
+		table head=\toprule name & {value} \\\midrule,
+		table foot=\bottomrule
+	]%
+	{${3:table.ext}}%
+	{name=\name, mu=\mu}%
+	{\name & \mu}
+\end{table}
+endsnippet
+
+snippet decl-mathop "Declare Mathoperator" b
+\\DeclareMathOperator{${1}}{${2}}
+$0
+endsnippet
+
+snippet ale "\alert{}" 
+\alert{${1}}$0	
+endsnippet

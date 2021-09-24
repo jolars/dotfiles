@@ -1,0 +1,115 @@
+snippet template-article "Template: Article" b
+\PassOptionsToPackage{unicode,pdfusetitle}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+
+\documentclass[english,a4paper]{article}
+
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath,amsthm,mathtools,isomath}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp} % provide euro and other symbols
+\usepackage{babel}
+
+\usepackage{upquote} % straight quotes in verbatim environments
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+
+\usepackage{xcolor}
+\usepackage{xurl}
+\usepackage{bookmark}
+\usepackage{csquotes}
+
+\usepackage{listings}
+
+\lstset{
+	basicstyle=\ttfamily, % print whole listing small
+	%keywordstyle=\color{black}\bfseries\underbar, % underlined bold black keywords
+	%commentstyle=\color{grey}, % white comments
+	keepspaces = true % no special string spaces
+}
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=Maroon,
+	filecolor=Maroon,
+	citecolor=Blue,
+	urlcolor=Blue
+}
+
+\usepackage{longtable,booktabs}
+
+\usepackage{etoolbox}
+
+% nice tables out of csv files
+\usepackage{csvsimple}
+
+% format units nicely
+\usepackage{siunitx}
+
+% Allow footnotes in longtable head/foot
+\usepackage{footnotehyper}
+\makesavenoteenv{longtable}
+
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+% tikz and pgfplots
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm,compat=1.16}
+\usepgfplotslibrary{external}
+\tikzexternalize
+
+\usepackage{pdfpages}
+
+% algorithms
+\usepackage{algorithm,algpseudocode}
+
+% bibliography
+\makeatletter
+\def\blx@nowarnpolyglossia{}
+\makeatother
+\usepackage[style=alphabetic,backend=biber,sorting=anyt]{biblatex}
+% \addbibresource{}
+
+% ]\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+% nice author blocks
+\usepackage[]{authblk}
+\renewcommand\Affilfont{\itshape\small}
+
+% title block
+\title{${1}}
+
+\author{Johan Larsson}
+\affil{The Department of Statistics, Lund University}
+
+%\author[1,*]{Johan Larsson}
+%\affil[1]{The Department of Statistics, Lund University}
+%\affil[*]{Corresponding author:
+%%\href{mailto:johan.larsson@stat.lu.se}{\nolinkurl{johan.larsson@stat.lu.se}}}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+$0
+
+%\printbibliography
+
+\end{document}
+endsnippet
+
+snippet template-minimal "Template: Minimal" b
+\documentclass{minimal}
+\begin{document}
+
+$0
+
+\end{document}
+endsnippet

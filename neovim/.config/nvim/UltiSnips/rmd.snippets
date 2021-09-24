@@ -1,0 +1,8 @@
+extends markdown
+
+snippet rc "RMD code chunk"
+\`\`\`\{r ${1:`!v expand("%:t:r")`_${2:Title}}\}
+${3:${VISUAL}}
+\`\`\`
+$0
+endsnippet
