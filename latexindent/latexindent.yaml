@@ -1,0 +1,29 @@
+modifyLineBreaks:
+  preserveBlankLines: 1
+  condenseMultipleBlankLinesInto: 1
+  textWrapOptions:
+    columns: 80
+    huge: overflow
+defaultIndent: "  "
+replacements:
+  - substitution: |-
+      s/\$\$
+        (.*?)
+        \$\$/\\[$1\\]/sgx
+  - substitution: |-
+      s/\$
+        (.*?)
+        \$/\\($1\\)/sgx
+specialBeginEnd:
+  leftRightParen:
+    begin: '\\left\('
+    end: '\\right\)'
+    lookForThis: 1
+  leftRightSquare:
+    begin: '\\left\['
+    end: '\\right\]'
+    lookForThis: 1
+  leftRightCurly:
+    begin: '\\left\\{'
+    end: '\\right\\}'
+    lookForThis: 1
