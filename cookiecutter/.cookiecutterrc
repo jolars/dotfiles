@@ -1,0 +1,13 @@
+default_context:
+  full_name: "Johan Larsson"
+  email: "johanlarsson@outlook.com"
+  github_username: "jolars"
+abbreviations:
+    la: https://github.com/jolars/TexArticle.git
+    lp: https://github.com/jolars/TexPresentation.git
+    pp: https://github.com/jolars/ReproduciblePythonProject.git
+    jp: https://github.com/jolars/ReproducibleJuliaProject.git
+    rp: https://github.com/jolars/ReproducibleRProject.git
+    gh: https://github.com/{0}.git
+    jl: https://github.com/jolars/{0}.git
+
