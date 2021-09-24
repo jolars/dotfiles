@@ -150,10 +150,13 @@ packer.startup(function()
 
   -- File Manger
   use "tpope/vim-vinegar"
-  -- use {
-  --   'francoiscabrol/ranger.vim',
-  --   requires = 'rbgrouleff/bclose.vim'
-  -- }
+  use {
+    'francoiscabrol/ranger.vim',
+    setup = [[
+      vim.g.ranger_map_keys = 0
+    ]],
+    requires = 'rbgrouleff/bclose.vim'
+  }
 
   -- Edit CSV files
   use "chrisbra/csv.vim"
