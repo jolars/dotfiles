@@ -1,3 +1,5 @@
+include "%L"
+
 # Greek alphabet
 <Multi_key> <g> <a> :       "α"    U03B1    # GREEK SMALL LETTER ALPHA
 <Multi_key> <g> <b> :       "β"    U03B2    # GREEK SMALL LETTER BETA
