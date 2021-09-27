@@ -18,6 +18,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
+# redshift
+exec --no-startup-id /usr/libexec/geoclue-2.0/demos/agent
+
 # dropbox
 exec --no-startup-id exec dropbox start
 
