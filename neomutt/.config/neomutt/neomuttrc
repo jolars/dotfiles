@@ -1,11 +1,15 @@
-# vim: filetype=muttrc
+# vim: filetype=neomuttrc
 
 source ~/.config/neomutt/settings
 source ~/.config/neomutt/colorscheme
 source ~/.config/neomutt/keybindings
 
-# Accounts
+# Open Default Account 
 source ~/.config/neomutt/accounts/outlook
 folder-hook $folder 'source ~/.config/neomutt/accounts/outlook'
 
+# source ~/.config/neomutt/accounts/gmail
+# folder-hook $folder 'source ~/.config/neomutt/accounts/gmail'
 
+# MIME-type settings
+set mailcap_path = ~/.config/neomutt/mailcap
