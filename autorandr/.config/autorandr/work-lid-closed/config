@@ -12,14 +12,12 @@ output DP-1-3
 off
 output DP-1-2
 crtc 2
-gamma 1.0:0.909:0.909
 mode 1920x1080
 pos 0x0
 rate 60.00
 rotate left
 output DP-1-1
 crtc 0
-gamma 1.0:0.909:0.909
 mode 1920x1080
 pos 1080x420
 primary
