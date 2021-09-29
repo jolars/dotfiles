@@ -5,9 +5,11 @@ set imap_check_subscribed
 
 set realname = "Johan Larsson"
 
-# Set preffered view modes
-auto_view text/html text/calendar application/ics # view html automatically
-alternative_order text/html text/plain text/enriched text/*
+# auto convert text/html MIME type to text/plain
+auto_view text/html
+
+# auto_view text/html text/calendar application/ics # view html automatically
+# alternative_order text/html text/plain text/enriched text/*
 
 # main options
 set envelope_from
@@ -64,8 +66,7 @@ set tilde
 # unset markers
 
 # caching
-set mailcap_path = ~/.config/neomutt/mailcap
-set header_cache = "~/.cache/mutt"
-set message_cachedir = "~/.cache/mutt"
+set header_cache = "~/.cache/mutt/headers/"
+set message_cachedir = "~/.cache/mutt/bodies/"
 
 # set query_command = "khard email --parsable --search-in-source-files '%s'"
