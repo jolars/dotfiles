@@ -8,6 +8,9 @@ set realname = "Johan Larsson"
 # auto convert text/html MIME type to text/plain
 auto_view text/html
 
+# prefer plain text
+alternative_order text/enriched text/plain text/html text/*
+
 # auto_view text/html text/calendar application/ics # view html automatically
 # alternative_order text/html text/plain text/enriched text/*
 
