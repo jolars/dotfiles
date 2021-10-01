@@ -1,0 +1,11 @@
+# vim: filetype=neomuttrc
+
+macro index,pager a "<save-message>$my_archive<Enter>"   "acrhive message"
+
+macro index,pager gi "<change-folder>=INBOX<enter>"      "open inbox"
+macro index,pager gd "<change-folder>=Drafts<enter>"     "open drafts"
+macro index,pager gs "<change-folder>=Sent<enter>"       "open sent"
+macro index,pager gt "<change-folder>$trash<enter>"      "open trash"
+macro index,pager ga "<change-folder>$my_archive<enter>" "open trash"
+macro index,pager gf "<change-folder>?"                  "open mailbox..."
+

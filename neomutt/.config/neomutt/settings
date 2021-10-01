@@ -5,6 +5,9 @@ set imap_check_subscribed
 
 set realname = "Johan Larsson"
 
+# MIME-type settings
+set mailcap_path = ~/.config/neomutt/mailcap
+
 # auto convert text/html MIME type to text/plain
 auto_view text/html
 
@@ -30,6 +33,10 @@ set forward_quote                    # include message in forwards
 set text_flowed
 unset sig_dashes                     # no dashes before sig
 unset mime_forward                   # forward attachments as part of body
+
+unset imap_passive
+set imap_keepalive = 300
+set mail_check = 60
 #unset help                           # No help bar at the top of index
 
 # set status_on_top                    # Status bar on top of index

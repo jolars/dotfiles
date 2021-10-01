@@ -10,6 +10,3 @@ folder-hook $folder 'source ~/.config/neomutt/accounts/outlook'
 
 # source ~/.config/neomutt/accounts/gmail
 # folder-hook $folder 'source ~/.config/neomutt/accounts/gmail'
-
-# MIME-type settings
-set mailcap_path = ~/.config/neomutt/mailcap
