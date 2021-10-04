@@ -1,0 +1,225 @@
+# outlook (larssonjohan86@gmail.com)
+IMAPAccount outlook
+Host imap-mail.outlook.com
+Port 993
+User johanlarsson@outlook.com
+PassCmd "pass email/johanlarsson@outlook.com"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-bundle.crt
+
+IMAPStore outlook-remote
+Account outlook
+
+MaildirStore outlook-local
+SubFolders Verbatim
+Path ~/.mail/outlook/
+Inbox ~/.mail/outlook/INBOX
+
+Channel outlook-default
+Far :outlook-remote:
+Near :outlook-local:
+Patterns INBOX Drafts Sent Archive Junk
+Create Both
+Expunge Both
+SyncState *
+
+Channel outlook-trash
+Far :outlook-remote:Deleted
+Near :outlook-local:Trash
+Create Both
+Expunge Both
+SyncState *
+
+Group outlook
+Channel outlook-default
+Channel outlook-trash
+
+# gmail (larssonjohan86@gmail.com)
+IMAPAccount gmail
+Host imap.gmail.com
+Port 993
+User larssonjohan86@gmail.com
+PassCmd "pass email/larssonjohan86@gmail.com"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-bundle.crt
+
+IMAPStore gmail-remote
+Account gmail
+
+MaildirStore gmail-local
+SubFolders Verbatim
+Path ~/.mail/gmail/
+Inbox ~/.mail/gmail/INBOX
+
+Channel gmail-inbox
+Far :gmail-remote:"INBOX"
+Near :gmail-local:INBOX
+Create Both
+Expunge Both
+SyncState *
+
+Channel gmail-drafts
+Far :gmail-remote:"[Gmail]/Drafts"
+Near :gmail-local:Drafts
+Create Both
+Expunge Both
+SyncState *
+
+Channel gmail-sent
+Far :gmail-remote:"[Gmail]/Sent Mail"
+Near :gmail-local:Sent
+Create Both
+Expunge Both
+SyncState *
+
+Channel gmail-archive
+Far :gmail-remote:"[Gmail]/All Mail"
+Near :gmail-local:Archive
+Create Both
+Expunge Both
+SyncState *
+
+Channel gmail-trash
+Far :gmail-remote:"[Gmail]/Trash"
+Near :gmail-local:Trash
+Create Both
+Expunge Both
+SyncState *
+
+Channel gmail-junk
+Far :gmail-remote:"[Gmail]/Spam"
+Near :gmail-local:Junk
+Create Both
+Expunge Both
+SyncState *
+
+Group gmail
+Channel gmail-inbox
+Channel gmail-drafts
+Channel gmail-sent
+Channel gmail-archive
+Channel gmail-trash
+Channel gmail-junk
+
+# statlu (johan.larsson@stat.lu.se)
+IMAPAccount statlu
+Host imap.lu.se
+Port 993
+User gerd-jln@lu.se
+PassCmd "pass email/johan.larsson@stat.lu.se"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-bundle.crt
+PipelineDepth 1
+
+IMAPStore statlu-remote
+Account statlu
+
+MaildirStore statlu-local
+SubFolders Verbatim
+Path ~/.mail/statlu/
+Inbox ~/.mail/statlu/INBOX
+Flatten .
+
+Channel statlu-default
+Far :statlu-remote:
+Near :statlu-local:
+Patterns INBOX Drafts Archive 
+Create Both
+Expunge Both
+SyncState *
+
+Channel statlu-trash
+Far :statlu-remote:"Deleted Items"
+Near :statlu-local:Trash
+Create Both
+Expunge Both
+SyncState *
+
+Channel statlu-junk
+Far :statlu-remote:"Junk Email"
+Near :statlu-local:Junk
+Create Both
+Expunge Both
+SyncState *
+
+Channel statlu-sent
+Far :statlu-remote:"Sent Items"
+Near :statlu-local:Sent
+Create Both
+Expunge Both
+SyncState *
+
+Group statlu
+Channel statlu-default
+Channel statlu-trash
+Channel statlu-junk
+Channel statlu-sent
+ 
+# studentlu (ekh05jla@student.lu.se)
+IMAPAccount studentlu
+Host imap.gmail.com
+Port 993
+User ekh05jla@student.lu.se
+PassCmd "pass email/ekh05jla@student.lu.se"
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-bundle.crt
+
+IMAPStore studentlu-remote
+Account studentlu
+
+MaildirStore studentlu-local
+SubFolders Verbatim
+Path ~/.mail/studentlu/
+Inbox ~/.mail/studentlu/INBOX
+Flatten .
+
+Channel studentlu-inbox
+Far :studentlu-remote:"INBOX"
+Near :studentlu-local:INBOX
+Create Both
+Expunge Both
+SyncState *
+
+Channel studentlu-drafts
+Far :studentlu-remote:"[Gmail]/Drafts"
+Near :studentlu-local:Drafts
+Create Both
+Expunge Both
+SyncState *
+
+Channel studentlu-sent
+Far :studentlu-remote:"[Gmail]/Sent Mail"
+Near :studentlu-local:Sent
+Create Both
+Expunge Both
+SyncState *
+
+Channel studentlu-archive
+Far :studentlu-remote:"[Gmail]/All Mail"
+Near :studentlu-local:Archive
+Create Both
+Expunge Both
+SyncState *
+
+Channel studentlu-trash
+Far :studentlu-remote:"[Gmail]/Trash"
+Near :studentlu-local:Trash
+Create Both
+Expunge Both
+SyncState *
+
+Channel studentlu-junk
+Far :studentlu-remote:"[Gmail]/Spam"
+Near :studentlu-local:Junk
+Create Both
+Expunge Both
+SyncState *
+
+Group studentlu
+Channel studentlu-inbox
+Channel studentlu-drafts
+Channel studentlu-sent
+Channel studentlu-archive
+Channel studentlu-trash
+Channel studentlu-junk
+
