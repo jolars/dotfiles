@@ -74,6 +74,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/LuaSnip"
   },
+  ["Nvim-R"] = {
+    loaded = true,
+    needs_bufread = false,
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/Nvim-R"
+  },
   ReplaceWithRegister = {
     loaded = true,
     path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/ReplaceWithRegister"
@@ -178,7 +183,7 @@ _G.packer_plugins = {
     path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
   },
   ["nvim-cmp"] = {
-    after = { "nvim-autopairs", "cmp-buffer", "cmp-nvim-lua", "cmp-path", "cmp_luasnip" },
+    after = { "nvim-autopairs", "cmp-nvim-lua", "cmp-path", "cmp-buffer", "cmp_luasnip" },
     config = { "require('config.cmp')" },
     loaded = false,
     needs_bufread = false,
@@ -279,6 +284,10 @@ _G.packer_plugins = {
   ["vim-bufkill"] = {
     loaded = true,
     path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-bufkill"
+  },
+  ["vim-devtools-plugin"] = {
+    loaded = true,
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-devtools-plugin"
   },
   ["vim-easy-align"] = {
     loaded = true,
@@ -402,14 +411,6 @@ if not vim.g.packer_custom_loader_enabled then
   vim.g.packer_custom_loader_enabled = true
 end
 
--- Setup for: ranger.vim
-time([[Setup for ranger.vim]], true)
-      vim.g.ranger_map_keys = 0
-    
-time([[Setup for ranger.vim]], false)
-time([[packadd for ranger.vim]], true)
-vim.cmd [[packadd ranger.vim]]
-time([[packadd for ranger.vim]], false)
 -- Setup for: neoterm
 time([[Setup for neoterm]], true)
       local g = vim.g
@@ -426,6 +427,29 @@ time([[Setup for neoterm]], false)
 time([[packadd for neoterm]], true)
 vim.cmd [[packadd neoterm]]
 time([[packadd for neoterm]], false)
+-- Setup for: Nvim-R
+time([[Setup for Nvim-R]], true)
+      local g = vim.g
+      g.R_nvim_wd = 1
+      g.R_assign = 0
+      g.R_rmdchunk = 0
+      g.rrst_syn_hl_chunk = 1
+      g.rmd_syn_hl_chunk = 1
+      g.r_indent_align_args = 0
+      g.r_indent_ess_comments = 0
+      g.r_indent_ess_compatible = 0
+    
+time([[Setup for Nvim-R]], false)
+time([[packadd for Nvim-R]], true)
+vim.cmd [[packadd Nvim-R]]
+time([[packadd for Nvim-R]], false)
+-- Setup for: vimtex
+time([[Setup for vimtex]], true)
+require('config.vimtex')
+time([[Setup for vimtex]], false)
+time([[packadd for vimtex]], true)
+vim.cmd [[packadd vimtex]]
+time([[packadd for vimtex]], false)
 -- Setup for: vim-pandoc
 time([[Setup for vim-pandoc]], true)
       local g = vim.g
@@ -438,25 +462,26 @@ time([[Setup for vim-pandoc]], false)
 time([[packadd for vim-pandoc]], true)
 vim.cmd [[packadd vim-pandoc]]
 time([[packadd for vim-pandoc]], false)
--- Setup for: vimtex
-time([[Setup for vimtex]], true)
-require('config.vimtex')
-time([[Setup for vimtex]], false)
-time([[packadd for vimtex]], true)
-vim.cmd [[packadd vimtex]]
-time([[packadd for vimtex]], false)
+-- Setup for: ranger.vim
+time([[Setup for ranger.vim]], true)
+      vim.g.ranger_map_keys = 0
+    
+time([[Setup for ranger.vim]], false)
+time([[packadd for ranger.vim]], true)
+vim.cmd [[packadd ranger.vim]]
+time([[packadd for ranger.vim]], false)
 -- Config for: gitsigns.nvim
 time([[Config for gitsigns.nvim]], true)
 require('config.gitsigns')
 time([[Config for gitsigns.nvim]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+require('config.lualine')
+time([[Config for lualine.nvim]], false)
 -- Config for: vim-prosession
 time([[Config for vim-prosession]], true)
 require('config.prosession')
 time([[Config for vim-prosession]], false)
--- Config for: indent-blankline.nvim
-time([[Config for indent-blankline.nvim]], true)
-require('config.indent-blankline')
-time([[Config for indent-blankline.nvim]], false)
 -- Config for: nvim-comment
 time([[Config for nvim-comment]], true)
 require('config.comment')
@@ -469,18 +494,18 @@ time([[Config for nvim-bufferline.lua]], false)
 time([[Config for formatter.nvim]], true)
 require('config.formatter')
 time([[Config for formatter.nvim]], false)
--- Config for: LuaSnip
-time([[Config for LuaSnip]], true)
-require('config.luasnip')
-time([[Config for LuaSnip]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+require('config.indent-blankline')
+time([[Config for indent-blankline.nvim]], false)
 -- Config for: nvim-treesitter
 time([[Config for nvim-treesitter]], true)
 require('config.treesitter')
 time([[Config for nvim-treesitter]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-require('config.lualine')
-time([[Config for lualine.nvim]], false)
+-- Config for: LuaSnip
+time([[Config for LuaSnip]], true)
+require('config.luasnip')
+time([[Config for LuaSnip]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
