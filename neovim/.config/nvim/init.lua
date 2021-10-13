@@ -33,7 +33,9 @@ opt('updatetime', 500)
 -- Word wrap stuff 
 opt('textwidth', 80, buffer)
 opt('colorcolumn', '81')
-opt('wrap', false)
+opt('wrap', true)
+opt('linebreak', true)
+opt('whichwrap', vim.o.whichwrap .. '<,>,h,l')
 
 -- Indentation (some of it overwritten by vim-sleuth)
 opt('shiftwidth', 2, buffer)
