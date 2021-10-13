@@ -21,3 +21,4 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Set default editor to
 export EDITOR="vi"
 export VISUAL="nvim"
+export BROWSER="firefox"
