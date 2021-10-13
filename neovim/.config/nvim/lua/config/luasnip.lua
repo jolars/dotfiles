@@ -201,6 +201,27 @@ ls.snippets = {
     aligned,
     anki_cloze,
   },
+  mail = {
+    s("mvh", {
+      t { "Vänliga hälsningar,", "Johan Larsson" },
+    }),
+
+    s("sig", {
+      t { "Best regards,", "Johan Larsson"},
+    }),
+
+    s("sinc", {
+      t { "Sincerely regards,", "Johan Larsson"},
+    }),
+
+    s("cheers", {
+      t { "Cheers,", "Johan Larsson"}
+    }),
+
+    s("dear", {
+      t { "Dear Sir/Madam,", "", ""}
+    })
+  },
 }
 
 ls.autosnippets = {
