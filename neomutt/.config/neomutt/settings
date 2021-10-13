@@ -1,15 +1,26 @@
 # vim: filetype=muttrc
 
-set my_name = "Johan Larsson"
-set imap_check_subscribed
-
 set realname = "Johan Larsson"
+
+set mbox_type = Maildir
+set folder = ~/.mail
+
+set signature = ""
+
+named-mailboxes "-------- ✉ OUTLOOK ---------" "=dummy-dividers/outlook"
+mailboxes =outlook/INBOX =outlook/Drafts =outlook/Sent =outlook/Archive =outlook/Trash =outlook/Junk
+named-mailboxes "-------- ✉ STAT-LU ---------" "=dummy-dividers/statlu"
+mailboxes =statlu/INBOX =statlu/Drafts =statlu/Sent =statlu/Archive =statlu/Trash =statlu/Junk
+named-mailboxes "--------- ✉ GMAIL ----------" "=dummy-dividers/gmail"
+mailboxes =gmail/INBOX =gmail/Drafts =gmail/Sent =gmail/Archive =gmail/Trash =gmail/Junk
+named-mailboxes "------- ✉ STUDENT-LU -------" "=dummy-dividers/studentlu"
+mailboxes =studentlu/INBOX =studentlu/Drafts =studentlu/Sent =studentlu/Archive =studentlu/Trash =studentlu/Junk
 
 # MIME-type settings
 set mailcap_path = ~/.config/neomutt/mailcap
 
 # auto convert text/html MIME type to text/plain
-auto_view text/html
+auto_view text/html text/calendar
 
 # prefer plain text
 alternative_order text/enriched text/plain text/html text/*
