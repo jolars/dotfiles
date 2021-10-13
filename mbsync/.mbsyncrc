@@ -6,9 +6,11 @@ User johanlarsson@outlook.com
 PassCmd "pass email/johanlarsson@outlook.com"
 SSLType IMAPS
 CertificateFile /etc/ssl/certs/ca-bundle.crt
+Timeout 30
 
 IMAPStore outlook-remote
 Account outlook
+MaxSize 34M
 
 MaildirStore outlook-local
 SubFolders Verbatim
@@ -42,9 +44,11 @@ User larssonjohan86@gmail.com
 PassCmd "pass email/larssonjohan86@gmail.com"
 SSLType IMAPS
 CertificateFile /etc/ssl/certs/ca-bundle.crt
+Timeout 30
 
 IMAPStore gmail-remote
 Account gmail
+MaxSize 25M
 
 MaildirStore gmail-local
 SubFolders Verbatim
@@ -110,9 +114,11 @@ PassCmd "pass email/johan.larsson@stat.lu.se"
 SSLType IMAPS
 CertificateFile /etc/ssl/certs/ca-bundle.crt
 PipelineDepth 1
+Timeout 30
 
 IMAPStore statlu-remote
 Account statlu
+MaxSize 25M
 
 MaildirStore statlu-local
 SubFolders Verbatim
@@ -163,9 +169,11 @@ User ekh05jla@student.lu.se
 PassCmd "pass email/ekh05jla@student.lu.se"
 SSLType IMAPS
 CertificateFile /etc/ssl/certs/ca-bundle.crt
+Timeout 30
 
 IMAPStore studentlu-remote
 Account studentlu
+MaxSize 25M
 
 MaildirStore studentlu-local
 SubFolders Verbatim
