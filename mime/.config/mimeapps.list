@@ -1,2 +1,4 @@
 [Default Applications]
 x-scheme-handler/mailto=neomutt.desktop;
+application/pdf=zathura.desktop;
+inode/directory=ranger.desktop;
