@@ -1,11 +1,16 @@
 # vim: filetype=neomuttrc
 
-macro index,pager a "<save-message>$my_archive<Enter>"   "acrhive message"
+# Jump to mailboxes
+# macro index,pager gf "<change-folder>?"                           "open mailbox..."
+macro index,pager gi "<change-folder>=$my_account/INBOX<enter>"   "open inbox"
+macro index,pager gd "<change-folder>=$my_account/Drafts<enter>"  "open drafts"
+macro index,pager gs "<change-folder>=$my_account/Sent<enter>"    "open sent"
+macro index,pager gt "<change-folder>=$my_account/Trash<enter>"   "open trash"
+macro index,pager gj "<change-folder>=$my_account/Junk<enter>"    "open trash"
+macro index,pager ga "<change-folder>=$my_account/Archive<enter>" "open trash"
 
-macro index,pager gi "<change-folder>=INBOX<enter>"      "open inbox"
-macro index,pager gd "<change-folder>=Drafts<enter>"     "open drafts"
-macro index,pager gs "<change-folder>=Sent<enter>"       "open sent"
-macro index,pager gt "<change-folder>$trash<enter>"      "open trash"
-macro index,pager ga "<change-folder>$my_archive<enter>" "open trash"
-macro index,pager gf "<change-folder>?"                  "open mailbox..."
-
+# Actions
+macro index,pager aa "<save-message>=$my_account/Archive<Enter>"                         "archive message"
+macro index,pager at "<tag-thread><tag-prefix><save-message>=$my_account/Archive<Enter>" "archive thread"
+macro index,pager ss "<save-message>=$my_account/Junk<Enter>"                            "move    message to junk (spam) folder"
+macro index,pager st "<tag-thread><tag-prefix><save-message>=$my_account/Junk<Enter>"    "move    thread  to junk folder"
