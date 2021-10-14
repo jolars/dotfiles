@@ -5,6 +5,9 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:DejaVu Sans 10 
 
+# redshift
+exec --no-startup-id /usr/libexec/geoclue-2.0/demos/agent
+
 # use autorandr to manage display configurations
 exec --no-startup-id autorandr --change
 
@@ -12,14 +15,13 @@ exec --no-startup-id autorandr --change
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xset s 240 120
-exec --no-startup-id xss-lock --transfer-sleep-lock -n /usr/share/doc/xss-lock/dim-screen.sh -- i3lock -c 000000 --nofork
+# exec --no-startup-id xset s 360
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- lock --nofork
+exec --no-startup-id xautolock -time 5 -locker lock
+# exec --no-startup-id xautolock -time 2 -locker "systemctl suspend"
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
-
-# redshift
-exec --no-startup-id /usr/libexec/geoclue-2.0/demos/agent
 
 # dropbox
 exec --no-startup-id exec dropbox start
@@ -34,8 +36,10 @@ for_window [class=.*] border pixel 2
 
 # APPLICATION SETTINGS
 
-# float all zoom windows (TODO: improve this)
 for_window [class="zoom"] floating enable
+for_window [class="zoom" title = "Zoom - Licensed Account"] floating disable
+for_window [class="zoom" title = "Zoom Meeting"] floating disable
+no_focus [class="zoom"]
 
 # for_window [title="^pdfpc - presentation.*$"] floating enable; resize set 1024 768; move absolute position center
 for_window [title="^pdfpc - present" ] border none floating enable
