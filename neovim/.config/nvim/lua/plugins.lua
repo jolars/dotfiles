@@ -32,6 +32,9 @@ packer.startup(function()
   -- Unix commands for vim
   use "tpope/vim-eunuch"
 
+  -- Asynchronous make
+  use "tpope/vim-dispatch"
+
   -- Git
   use "tpope/vim-fugitive"
   use "tpope/vim-rhubarb"
@@ -146,7 +149,9 @@ packer.startup(function()
   use "michaeljsmith/vim-indent-object"
 
   -- Align at character
-  use "junegunn/vim-easy-align"
+  use {
+    "junegunn/vim-easy-align",
+  }
 
   -- File Manger
   use "tpope/vim-vinegar"
@@ -176,24 +181,24 @@ packer.startup(function()
       --g.neoterm_size = 80
     ]],
   }
-  
-  -- R
-  use {
-    "jalvesaq/Nvim-R", 
-    setup = [[
-      local g = vim.g
-      g.R_nvim_wd = 1
-      g.R_assign = 0
-      g.R_rmdchunk = 0
-      g.rrst_syn_hl_chunk = 1
-      g.rmd_syn_hl_chunk = 1
-      g.r_indent_align_args = 0
-      g.r_indent_ess_comments = 0
-      g.r_indent_ess_compatible = 0
-    ]]
-  }
 
-  use "mllg/vim-devtools-plugin"
+  --   -- R
+  --   use {
+  --     "jalvesaq/Nvim-R",
+  --     setup = [[
+  --       local g = vim.g
+  --       g.R_nvim_wd = 1
+  --       g.R_assign = 0
+  --       g.R_rmdchunk = 0
+  --       g.rrst_syn_hl_chunk = 1
+  --       g.rmd_syn_hl_chunk = 1
+  --       g.r_indent_align_args = 0
+  --       g.r_indent_ess_comments = 0
+  --       g.r_indent_ess_compatible = 0
+  --     ]]
+  --   }
+
+  -- use "mllg/vim-devtools-plugin"
 
   -- Automatically make nonexistent directories
   use "pbrisbin/vim-mkdir"
