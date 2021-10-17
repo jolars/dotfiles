@@ -17,7 +17,7 @@ exec --no-startup-id autorandr --change
 # screen before suspend. Use loginctl lock-session to lock your screen.
 # exec --no-startup-id xset s 360
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- lock --nofork
-exec --no-startup-id xautolock -time 5 -locker lock
+exec --no-startup-id xautolock -time 10 -locker lock
 # exec --no-startup-id xautolock -time 2 -locker "systemctl suspend"
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
