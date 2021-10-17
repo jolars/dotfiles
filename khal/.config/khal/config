@@ -1,3 +1,8 @@
+# available colors: 
+# black, white, brown, yellow, dark gray, dark green, dark blue, light gray,
+# light green, light blue, dark magenta, dark cyan, dark red, light magenta,
+# light cyan, light red
+
 [default]
 default_calendar = personal
 highlight_event_days = True
@@ -6,18 +11,18 @@ highlight_event_days = True
 [[personal]]
 path = ~/.calendars/gmail/larssonjohan86@gmail.com/
 type = calendar
-color = dark cyan
+color = brown
 
 [[tove]]
 path = ~/.calendars/gmail/tove.bournonville@gmail.com/
 type = calendar
-color = dark magenta
+color = dark green
 readonly = True
 
 [[canvas]]
 path = ~/.calendars/gmail/u6801n75eib4mm0jus35mig9bt4b83q5@import.calendar.google.com/
 type = calendar
-color = dark red
+color = dark blue
 readonly = True
 
 [[doodle]]
@@ -29,19 +34,19 @@ readonly = True
 [[gerdahallen]]
 path = ~/.calendars/gmail/kauahklcmcteej5iku7c2t5qa21fghrt@import.calendar.google.com/
 type = calendar
-color = dark gray
+color = brown
 readonly = True
 
 [[birthdays]]
 path = ~/.contacts/gmail/default
 type = birthdays
-color = dark blue
+color = dark magenta
 readonly = True
 
 [[holidays]]
 path = ~/.calendars/gmail/cln2ssrncli6isr84dk6ur39chgnig37e9nnas1eeon66obccln68obi5pjmurr7dhiisorfdk@virtual/
 type = calendar
-color = brown
+color = dark red
 
 [locale]
 local_timezone = Europe/Stockholm
@@ -54,4 +59,4 @@ datetimeformat = %Y-%m-%d %H:%M
 longdatetimeformat = %Y-%m-%d %H:%M
 
 [highlight_days]
-color = light blue
+default_color = light blue
