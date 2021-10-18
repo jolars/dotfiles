@@ -1,5 +1,8 @@
 # .bash_profile
 
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
@@ -10,11 +13,6 @@ fi
 # goneovim
 export PATH="/opt/goneovim/:$PATH"
 
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-
 # Add cargo to path
 export PATH="$HOME/.cargo/bin:$PATH"
 
@@ -22,3 +20,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export EDITOR="vi"
 export VISUAL="nvim"
 export BROWSER="firefox"
+
+# pyenv
+eval "$(pyenv init --path)"
