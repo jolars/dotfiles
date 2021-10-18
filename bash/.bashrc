@@ -75,3 +75,6 @@ export OPENSSL_CONF=/etc/ssl
 export TERMINAL=/usr/bin/alacritty
 
 export QT_QPA_PLATFORMTHEME=qt5ct
+
+# pyenv
+eval "$(pyenv init -)"
