@@ -27,7 +27,7 @@ format = "{1m}"
 [[block]]
 block = "sound"
 on_click = "exec pavucontrol &"
-max_vol = 150
+max_vol = 100
 
 [[block]]
 block = "battery"
