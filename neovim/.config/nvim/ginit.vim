@@ -7,7 +7,7 @@ set conceallevel=0
 " Set Editor Font
 if exists(':GuiFont')
     " Use GuiFont! to ignore font errors
-    GuiFont! RobotoMono Nerd Font:h10
+    GuiFont! RobotoMono Nerd Font:h11
 endif
 
 " Disable GUI Tabline
