@@ -207,20 +207,20 @@ ls.snippets = {
     }),
 
     s("sig", {
-      t { "Best regards,", "Johan Larsson"},
+      t { "Best regards,", "Johan Larsson" },
     }),
 
     s("sinc", {
-      t { "Sincerely regards,", "Johan Larsson"},
+      t { "Sincerely regards,", "Johan Larsson" },
     }),
 
     s("cheers", {
-      t { "Cheers,", "Johan Larsson"}
+      t { "Cheers,", "Johan Larsson" },
     }),
 
     s("dear", {
-      t { "Dear Sir/Madam,", "", ""}
-    })
+      t { "Dear Sir/Madam,", "", "" },
+    }),
   },
 }
 
@@ -240,5 +240,14 @@ ls.autosnippets = {
   rmarkdown = {
     inline_math,
     display_math,
+    s("```", {
+      t { "```{r" },
+      i(1),
+      t "}",
+      t { "", "" },
+      i(2),
+      t { "", "" },
+      i(0),
+    }),
   },
 }
