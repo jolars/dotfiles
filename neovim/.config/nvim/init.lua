@@ -31,7 +31,7 @@ opt('mouse', 'nivh')
 opt('updatetime', 500)
 
 -- Word wrap stuff 
-opt('textwidth', 80, buffer)
+opt('textwidth', 0, buffer)
 opt('colorcolumn', '81')
 opt('wrap', true)
 opt('linebreak', true)
