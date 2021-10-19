@@ -41,8 +41,9 @@ for_window [class="zoom" title = "Zoom - Licensed Account"] floating disable
 for_window [class="zoom" title = "Zoom Meeting"] floating disable
 no_focus [class="zoom"]
 
-# for_window [title="^pdfpc - presentation.*$"] floating enable; resize set 1024 768; move absolute position center
-for_window [title="^pdfpc - present" ] border none floating enable
+for_window [title="^pdfpc.*" window_role="presentation"] border none; floating enable; fullscreen disable #; resize set 1024 768; move absolute position center
+# for_window [ title="^pdfpc.*" window_role="presentation" ] floating enable; resize set 1024 768; move absolute position center
+# for_window [title="^pdfpc - presentation.*$"] border none floating enable
 
 # Use pactl to adjust volume in PulseAudio.
 # set $refresh_i3status killall -SIGUSR1 i3status
