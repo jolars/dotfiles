@@ -12,5 +12,7 @@ macro index,pager ga "<change-folder>=$my_account/Archive<enter>" "open trash"
 # Actions
 macro index,pager aa "<save-message>=$my_account/Archive<Enter>"                         "archive message"
 macro index,pager at "<tag-thread><tag-prefix><save-message>=$my_account/Archive<Enter>" "archive thread"
-macro index,pager ss "<save-message>=$my_account/Junk<Enter>"                            "move    message to junk (spam) folder"
-macro index,pager st "<tag-thread><tag-prefix><save-message>=$my_account/Junk<Enter>"    "move    thread  to junk folder"
+macro index,pager ss "<save-message>=$my_account/Junk<Enter>"                            "move message to spam folder"
+macro index,pager st "<tag-thread><tag-prefix><save-message>=$my_account/Junk<Enter>"    "move thread to spam folder"
+macro index,pager ii "<save-message>=$my_account/INBOX<Enter>"                            "move message to inbox"
+

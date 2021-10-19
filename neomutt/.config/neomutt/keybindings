@@ -1,15 +1,16 @@
 # vim: filetype=neomuttrc
 
 # Unbind keys
-bind generic            z   noop
-bind index,pager,attach g   noop
-bind generic,index,pager        d   noop
-bind generic,index,pager        a   noop
-bind index,pager        s   noop
-bind index,pager        c   noop
-bind generic,pager      t   noop
-bind index              h   noop
-bind index,pager        \Cb noop
+bind generic             z   noop
+bind index,pager,attach  g   noop
+bind generic,index,pager d   noop
+bind generic,index,pager a   noop
+bind index,pager         s   noop
+bind index,pager         c   noop
+bind generic,pager       t   noop
+bind index,generic,pager i   noop
+bind index               h   noop
+bind index,pager         \Cb noop
 
 # # Access mail accounts
 # macro index,pager ao '<sync-mailbox><enter-command>source ~/.config/neomutt/accounts/outlook<enter><change-folder>!<enter>'
