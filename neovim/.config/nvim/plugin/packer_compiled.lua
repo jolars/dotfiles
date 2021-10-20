@@ -182,6 +182,7 @@ _G.packer_plugins = {
     config = { "require('config.cmp')" },
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/nvim-cmp"
   },
   ["nvim-colorizer.lua"] = {
@@ -243,6 +244,7 @@ _G.packer_plugins = {
     keys = { { "n", '"' }, { "i", "<c-r>" } },
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/registers.nvim"
   },
   ["spellsitter.nvim"] = {
@@ -266,6 +268,7 @@ _G.packer_plugins = {
     config = { "require('config.telescope')" },
     loaded = false,
     needs_bufread = true,
+    only_cond = false,
     path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/telescope.nvim"
   },
   ["trouble.nvim"] = {
@@ -419,7 +422,7 @@ time([[Setup for neoterm]], true)
       local g = vim.g
       g.neoterm_autoscroll = true
       g.neoterm_bracketed_paste = true
-      g.neoterm_default_mod = 'vertical'
+      -- g.neoterm_default_mod = 'vertical'
       g.neoterm_fixedsize = false
       -- g.neoterm_repl_python = "python"
       g.neoterm_repl_enable_ipython_paste_magic = true
@@ -493,8 +496,8 @@ time([[Defining lazy-load commands]], false)
 
 -- Keymap lazy-loads
 time([[Defining lazy-load keymaps]], true)
-vim.cmd [[nnoremap <silent> " <cmd>lua require("packer.load")({'registers.nvim'}, { keys = "\"", prefix = "" }, _G.packer_plugins)<cr>]]
 vim.cmd [[inoremap <silent> <c-r> <cmd>lua require("packer.load")({'registers.nvim'}, { keys = "<lt>c-r>" }, _G.packer_plugins)<cr>]]
+vim.cmd [[nnoremap <silent> " <cmd>lua require("packer.load")({'registers.nvim'}, { keys = "\"", prefix = "" }, _G.packer_plugins)<cr>]]
 time([[Defining lazy-load keymaps]], false)
 
 vim.cmd [[augroup packer_load_aucmds]]
