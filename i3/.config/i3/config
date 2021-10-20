@@ -29,6 +29,9 @@ exec --no-startup-id exec dropbox start
 # launch backup (deja-dup)
 exec --no-startup-id /usr/libexec/deja-dup/deja-dup-monitor
 
+exec --no-startup-id i3-sensible-terminal --title scratch
+for_window [title="^scratch$"] move scratchpad
+
 # UI
 
 # force borders for windows, no window titles
