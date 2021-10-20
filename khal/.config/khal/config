@@ -53,9 +53,9 @@ local_timezone = Europe/Stockholm
 default_timezone = Europe/Stockholm
 weeknumbers = left
 timeformat = %H:%M
-dateformat = %Y-%m-%d
+dateformat = %d/%m
 longdateformat = %Y-%m-%d
-datetimeformat = %Y-%m-%d %H:%M
+datetimeformat = %d/%m %H:%M
 longdatetimeformat = %Y-%m-%d %H:%M
 
 [highlight_days]
