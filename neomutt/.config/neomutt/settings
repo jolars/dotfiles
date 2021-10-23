@@ -20,13 +20,10 @@ mailboxes =studentlu/INBOX =studentlu/Drafts =studentlu/Sent =studentlu/Archive 
 set mailcap_path = ~/.config/neomutt/mailcap
 
 # auto convert text/html MIME type to text/plain
-auto_view text/html text/calendar
+auto_view text/html text/calendar application/ics
 
 # prefer plain text
 alternative_order text/enriched text/plain text/html text/*
-
-# auto_view text/html text/calendar application/ics # view html automatically
-# alternative_order text/html text/plain text/enriched text/*
 
 # main options
 set envelope_from
@@ -56,18 +53,12 @@ set mail_check = 30
 # set status_on_top                    # Status bar on top of index
 
 set sidebar_visible
-# set sidebar_format = "%D%?F? [%F]?%* %?N?%N/?%S"
-
 set sidebar_format = '%D%?F? [%F]?%* %<N?%N/>%<S?%S>'
 set sidebar_short_path
-# set sidebar_folder_indent
-# set sidebar_indent_string = "  "
 set mail_check_stats
 
-# unset confirmappend      # don't ask, just do!
 # set quit                 # don't ask, just do!!
 # unset mark_old           # read/new is good enough for me
-# set beep_new             # bell on new mails
 set pipe_decode          # strip headers and eval mimes when piping
 set thorough_search      # strip headers and eval mimes before searching
 set timeout = 0
@@ -98,5 +89,7 @@ unset markers
 set header_cache = "~/.cache/mutt/headers/"
 set message_cachedir = "~/.cache/mutt/bodies/"
 
-set query_command = "khard email --parsable %s"
+# set query_command = "khard email --parsable %s"
+set query_command = "notmuch address %s"
+
 # set query_command = "khard email --parsable --search-in-source-files '%s'"
