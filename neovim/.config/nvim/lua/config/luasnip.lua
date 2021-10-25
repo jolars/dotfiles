@@ -74,22 +74,22 @@ ls.snippets = {
 
     s("columns", {
       t { "\\begin{columns}[" },
-      i(1, "t"),
+      i(1, "c, onlytextwidth"),
       t { "]", "\t" },
       i(2),
       t { "", "" },
-      t { "\\end{columns}", "" },
+      t { "\\end{columns}" },
       i(0),
     }),
 
     s("column", {
       t "\\begin{column}{",
-      i(1, "0.45\\linewidth"),
+      i(1, "0.5\\linewidth"),
       t { "}", "" },
       t "\t",
       i(2),
       t { "", "" },
-      t { "\\end{column}", "" },
+      t { "\\end{column}" },
       i(0),
     }),
 
@@ -98,7 +98,7 @@ ls.snippets = {
       i(1),
       t { "}", "\t" },
       i(2),
-      t { "", "\\end{block}", "" },
+      t { "", "\\end{block}" },
       i(0),
     }),
 
