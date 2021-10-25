@@ -422,7 +422,7 @@ time([[Setup for neoterm]], true)
       local g = vim.g
       g.neoterm_autoscroll = true
       g.neoterm_bracketed_paste = true
-      -- g.neoterm_default_mod = 'vertical'
+      g.neoterm_default_mod = 'vertical'
       g.neoterm_fixedsize = false
       -- g.neoterm_repl_python = "python"
       g.neoterm_repl_enable_ipython_paste_magic = true
