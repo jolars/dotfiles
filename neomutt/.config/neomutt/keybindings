@@ -72,6 +72,7 @@ bind index,pager \Cl sidebar-open
 # Actions
 bind index,pager R group-reply
 bind index,pager d delete-thread
+
 # bind index,pager dd delete-message
 # bind index,pager dt delete-thread
 # macro index,pager    ss  ":macro browser \\015 \"\<select-entry\>\<sync-mailbox\>:bind browser \\\\015 select-entry\\015:bind browser q exit\\015\"\015:macro browser q \"<exit>:bind browser \\\\015 select-entry\\015:bind browser q exit\\015\"\015<save-message>?"                                                                                                                                     "save message to a mailbox"
