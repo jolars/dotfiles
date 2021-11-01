@@ -141,7 +141,7 @@ map(
 map("n", "gw", ":ArgWrap<cr>", silent)
 
 -- Git
-map("n", "<leader>g", "<cmd>vertical Git<cr>", silent)
+map("n", "<leader>g", "<cmd>Git<cr>", silent)
 
 --  REPL
 map("v", "gs", "<Plug>(neoterm-repl-send)", remap)
