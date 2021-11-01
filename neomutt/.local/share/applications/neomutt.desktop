@@ -3,7 +3,7 @@
 [Desktop Entry]
 Name=Neomutt
 Comment=Terminal E-Mail Client
-Exec=neomutt
+Exec=neomutt %u
 Terminal=true
 Type=Application
 Icon=/usr/share/doc/neomutt/logo/neomutt-256.png
