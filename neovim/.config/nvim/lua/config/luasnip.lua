@@ -127,10 +127,12 @@ ls.snippets = {
     }),
 
     s("frame", {
-      t { "\\begin{frame}{" },
-      i(1),
-      t { "}", "\t" },
+      t { "\\begin{frame}[" },
+      i(1, "c"),
+      t ("]{"),
       i(2),
+      t { "}", "\t" },
+      i(3),
       t { "", "\\end{frame}", "" },
       i(0),
     }),
