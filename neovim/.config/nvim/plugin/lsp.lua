@@ -1,6 +1,7 @@
 local lspconfig = require "lspconfig"
 local trouble = require "trouble"
 local lspkind = require "lspkind"
+
 local lsp = vim.lsp
 local buf_keymap = vim.api.nvim_buf_set_keymap
 local cmd = vim.cmd
@@ -139,7 +140,7 @@ end
 local servers = {
   clangd = {},
   texlab = {},
-  pylsp = {},
+  pyright = { settings = { python = { formatting = { provider = "yapf" } } } },
   r_language_server = {},
   julials = {},
   vimls = {},
@@ -170,10 +171,10 @@ for server, config in pairs(servers) do
     config = config()
   end
   config.on_attach = on_attach
-  lspconfig[server].setup(config)
   config.capabilities = vim.tbl_deep_extend(
     "keep",
     config.capabilities or {},
     client_capabilities
   )
+  lspconfig[server].setup(config)
 end
