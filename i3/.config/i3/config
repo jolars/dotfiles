@@ -8,6 +8,9 @@ font pango:DejaVu Sans 10
 # redshift
 exec --no-startup-id /usr/libexec/geoclue-2.0/demos/agent
 
+# bluetooth
+exec --no-startup-id blueman-applet
+
 # use autorandr to manage display configurations
 exec --no-startup-id autorandr --change
 
