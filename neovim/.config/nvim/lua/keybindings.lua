@@ -144,10 +144,14 @@ map("n", "gw", ":ArgWrap<cr>", silent)
 map("n", "<leader>g", "<cmd>Git<cr>", silent)
 
 --  REPL
-map("v", "gs", "<Plug>(neoterm-repl-send)", remap)
-map("n", "gs", "<Plug>(neoterm-repl-send)", remap)
-map("n", "gss", "<Plug>(neoterm-repl-send-line)", remap)
-map("n", "gsf", "<cmd>treplsendfile<cr>", remap)
+-- map("v", "gs", "<Plug>(neoterm-repl-send)", remap)
+-- map("n", "gs", "<Plug>(neoterm-repl-send)", remap)
+-- map("n", "gss", "<Plug>(neoterm-repl-send-line)", remap)
+-- map("n", "gsf", "<cmd>treplsendfile<cr>", remap)
+map("x", "gs", "<Plug>SlimeRegionSend", remap)
+map("n", "gs", "<Plug>SlimeParagraphSend", remap)
+-- map("n", "gss", "<Plug>(neoterm-repl-send-line)", remap)
+-- map("n", "gsf", "<cmd>treplsendfile<cr>", remap)
 
 -- Format
 map("n", "<leader>f", "<cmd>Format<cr>", silent)
