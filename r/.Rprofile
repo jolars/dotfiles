@@ -54,3 +54,7 @@ if (interactive() && Sys.getenv("TERM_PROGRAM") == "vscode") {
 
 # Set shiny options
 options(shiny.autoreload = TRUE)
+
+# set virtualenv for reticulate (and friends)
+reticulate::use_virtualenv("~/.pyenv/versions/reticulate")
+
