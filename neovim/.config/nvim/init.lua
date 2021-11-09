@@ -83,3 +83,7 @@ vim.cmd [[colorscheme onedark]]
 g.netrw_fastbrowse = 0
 g.netrw_liststyle = 0
 
+-- Setup python
+g.python_host_prog = '~/.pyenv/versions/neovim2/bin/python'
+g.python3_host_prog = '~/.pyenv/versions/neovim3/bin/python'
+

@@ -72,15 +72,18 @@ _G.packer_plugins = {
   LuaSnip = {
     config = { "require('config.luasnip')" },
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/LuaSnip"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ReplaceWithRegister = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/ReplaceWithRegister"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/ReplaceWithRegister",
+    url = "https://github.com/vim-scripts/ReplaceWithRegister"
   },
   ["bclose.vim"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/bclose.vim"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/bclose.vim",
+    url = "https://github.com/rbgrouleff/bclose.vim"
   },
   ["cmp-buffer"] = {
     after_files = { "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/cmp-buffer/after/plugin/cmp_buffer.lua" },
@@ -89,11 +92,23 @@ _G.packer_plugins = {
     },
     loaded = false,
     needs_bufread = false,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/cmp-buffer"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
+  },
+  ["cmp-cmdline"] = {
+    after_files = { "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/cmp-cmdline/after/plugin/cmp_cmdline.lua" },
+    load_after = {
+      ["nvim-cmp"] = true
+    },
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/cmp-cmdline",
+    url = "https://github.com/hrsh7th/cmp-cmdline"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   ["cmp-nvim-lua"] = {
     after_files = { "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/cmp-nvim-lua/after/plugin/cmp_nvim_lua.lua" },
@@ -102,7 +117,8 @@ _G.packer_plugins = {
     },
     loaded = false,
     needs_bufread = false,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/cmp-nvim-lua"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/cmp-nvim-lua",
+    url = "https://github.com/hrsh7th/cmp-nvim-lua"
   },
   ["cmp-path"] = {
     after_files = { "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/cmp-path/after/plugin/cmp_path.lua" },
@@ -111,7 +127,8 @@ _G.packer_plugins = {
     },
     loaded = false,
     needs_bufread = false,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/cmp-path"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
   },
   cmp_luasnip = {
     after_files = { "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/cmp_luasnip/after/plugin/cmp_luasnip.lua" },
@@ -120,44 +137,47 @@ _G.packer_plugins = {
     },
     loaded = false,
     needs_bufread = false,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/cmp_luasnip"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/cmp_luasnip",
+    url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["csv.vim"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/csv.vim"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/csv.vim",
+    url = "https://github.com/chrisbra/csv.vim"
   },
   ["formatter.nvim"] = {
     config = { "require('config.formatter')" },
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/formatter.nvim"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/formatter.nvim",
+    url = "https://github.com/mhartington/formatter.nvim"
   },
   ["gitsigns.nvim"] = {
     config = { "require('config.gitsigns')" },
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   ["indent-blankline.nvim"] = {
     config = { "require('config.indent-blankline')" },
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["lsp_signature.nvim"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
+    url = "https://github.com/ray-x/lsp_signature.nvim"
   },
   ["lspkind-nvim"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
+    url = "https://github.com/onsails/lspkind-nvim"
   },
   ["lualine.nvim"] = {
     config = { "require('config.lualine')" },
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/lualine.nvim"
-  },
-  neoterm = {
-    loaded = true,
-    needs_bufread = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/neoterm"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/hoob3rt/lualine.nvim"
   },
   ["nvim-autopairs"] = {
     config = { "require('config.autopairs')" },
@@ -166,41 +186,49 @@ _G.packer_plugins = {
     },
     loaded = false,
     needs_bufread = false,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/nvim-autopairs"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-bqf"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/nvim-bqf"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/nvim-bqf",
+    url = "https://github.com/kevinhwang91/nvim-bqf"
   },
   ["nvim-bufferline.lua"] = {
     config = { "require('config.bufferline')" },
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua",
+    url = "https://github.com/akinsho/nvim-bufferline.lua"
   },
   ["nvim-cmp"] = {
-    after = { "nvim-autopairs", "cmp-nvim-lua", "cmp-buffer", "cmp-path", "cmp_luasnip" },
+    after = { "cmp_luasnip", "nvim-autopairs", "cmp-nvim-lua", "cmp-cmdline", "cmp-buffer", "cmp-path" },
     config = { "require('config.cmp')" },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/nvim-cmp"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-colorizer.lua"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-comment"] = {
     config = { "require('config.comment')" },
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/nvim-comment"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/nvim-comment",
+    url = "https://github.com/terrortylor/nvim-comment"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-lspinstall"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/nvim-lspinstall",
+    url = "https://github.com/kabouzeid/nvim-lspinstall"
   },
   ["nvim-treesitter"] = {
     after = { "nvim-autopairs" },
@@ -209,59 +237,72 @@ _G.packer_plugins = {
   },
   ["nvim-treesitter-refactor"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/nvim-treesitter-refactor"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/nvim-treesitter-refactor",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter-refactor"
   },
   ["nvim-treesitter-textobjects"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects",
+    url = "/home/gerd-jln/vim-plugins/nvim-treesitter-textobjects"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["onedark.vim"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/onedark.vim"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/onedark.vim",
+    url = "https://github.com/joshdick/onedark.vim"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/packer.nvim"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/popup.nvim"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/popup.nvim",
+    url = "https://github.com/nvim-lua/popup.nvim"
   },
   ["ranger.vim"] = {
     loaded = true,
     needs_bufread = false,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/ranger.vim"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/ranger.vim",
+    url = "https://github.com/francoiscabrol/ranger.vim"
   },
   ["registers.nvim"] = {
     keys = { { "n", '"' }, { "i", "<c-r>" } },
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/registers.nvim"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/registers.nvim",
+    url = "https://github.com/tversteeg/registers.nvim"
   },
   ["spellsitter.nvim"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/spellsitter.nvim"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/spellsitter.nvim",
+    url = "https://github.com/lewis6991/spellsitter.nvim"
   },
   ["targets.vim"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/targets.vim"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/targets.vim",
+    url = "https://github.com/wellle/targets.vim"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
   },
   ["telescope-media-files.nvim"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
+    url = "https://github.com/nvim-telescope/telescope-media-files.nvim"
   },
   ["telescope.nvim"] = {
     commands = { "Telescope" },
@@ -269,119 +310,158 @@ _G.packer_plugins = {
     loaded = false,
     needs_bufread = true,
     only_cond = false,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/telescope.nvim"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["trouble.nvim"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/trouble.nvim"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
   },
   ["vim-argwrap"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-argwrap"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-argwrap",
+    url = "https://github.com/FooSoft/vim-argwrap"
   },
   ["vim-bufkill"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-bufkill"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-bufkill",
+    url = "https://github.com/qpkorr/vim-bufkill"
   },
   ["vim-dispatch"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-dispatch"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-dispatch",
+    url = "https://github.com/tpope/vim-dispatch"
   },
   ["vim-easy-align"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-easy-align"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-easy-align",
+    url = "https://github.com/junegunn/vim-easy-align"
   },
   ["vim-eunuch"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-eunuch"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-eunuch",
+    url = "https://github.com/tpope/vim-eunuch"
   },
   ["vim-fugitive"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
   },
   ["vim-headerguard"] = {
     loaded = true,
     needs_bufread = false,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/vim-headerguard"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/vim-headerguard",
+    url = "https://github.com/drmikehenry/vim-headerguard"
   },
   ["vim-indent-object"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-indent-object"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-indent-object",
+    url = "https://github.com/michaeljsmith/vim-indent-object"
   },
   ["vim-mkdir"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-mkdir"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-mkdir",
+    url = "https://github.com/pbrisbin/vim-mkdir"
   },
   ["vim-obsession"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-obsession"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-obsession",
+    url = "https://github.com/tpope/vim-obsession"
   },
   ["vim-pandoc"] = {
     loaded = true,
     needs_bufread = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/vim-pandoc"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/vim-pandoc",
+    url = "https://github.com/vim-pandoc/vim-pandoc"
   },
   ["vim-pandoc-syntax"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-pandoc-syntax"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-pandoc-syntax",
+    url = "https://github.com/vim-pandoc/vim-pandoc-syntax"
   },
   ["vim-prosession"] = {
     config = { "require('config.prosession')" },
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-prosession"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-prosession",
+    url = "https://github.com/dhruvasagar/vim-prosession"
+  },
+  ["vim-pyenv"] = {
+    loaded = true,
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-pyenv",
+    url = "https://github.com/lambdalisue/vim-pyenv"
   },
   ["vim-repeat"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-repeat"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-repeat",
+    url = "https://github.com/tpope/vim-repeat"
   },
   ["vim-rhubarb"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-rhubarb"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-rhubarb",
+    url = "https://github.com/tpope/vim-rhubarb"
   },
   ["vim-rmarkdown"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-rmarkdown"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-rmarkdown",
+    url = "https://github.com/vim-pandoc/vim-rmarkdown"
   },
   ["vim-sleuth"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-sleuth"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-sleuth",
+    url = "https://github.com/tpope/vim-sleuth"
+  },
+  ["vim-slime"] = {
+    loaded = true,
+    needs_bufread = true,
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/vim-slime",
+    url = "https://github.com/jpalardy/vim-slime"
   },
   ["vim-sneak"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-sneak"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-sneak",
+    url = "https://github.com/justinmk/vim-sneak"
   },
   ["vim-startify"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-startify"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-startify",
+    url = "https://github.com/mhinz/vim-startify"
   },
   ["vim-surround"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-surround"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
   },
   ["vim-table-mode"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-table-mode"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-table-mode",
+    url = "https://github.com/dhruvasagar/vim-table-mode"
   },
   ["vim-textobj-entire"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-textobj-entire"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-textobj-entire",
+    url = "https://github.com/kana/vim-textobj-entire"
   },
   ["vim-textobj-user"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-textobj-user"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-textobj-user",
+    url = "https://github.com/kana/vim-textobj-user"
   },
   ["vim-vinegar"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-vinegar"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-vinegar",
+    url = "https://github.com/tpope/vim-vinegar"
   },
   ["vim-wordmotion"] = {
     loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-wordmotion"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-wordmotion",
+    url = "https://github.com/chaoren/vim-wordmotion"
   },
   vimtex = {
     loaded = true,
     needs_bufread = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/vimtex"
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/vimtex",
+    url = "https://github.com/lervag/vimtex"
   }
 }
 
@@ -414,22 +494,15 @@ if not vim.g.packer_custom_loader_enabled then
   vim.g.packer_custom_loader_enabled = true
 end
 
--- Setup for: neoterm
-time([[Setup for neoterm]], true)
-      local g = vim.g
-      g.neoterm_autoscroll = true
-      g.neoterm_bracketed_paste = true
-      g.neoterm_default_mod = 'vertical'
-      g.neoterm_fixedsize = false
-      -- g.neoterm_repl_python = "python"
-      g.neoterm_repl_enable_ipython_paste_magic = true
-      g.neoterm_repl_r = 'radian'
-      --g.neoterm_size = 80
+-- Setup for: vim-slime
+time([[Setup for vim-slime]], true)
+      vim.g.slime_target = "neovim"
+      vim.g.slime_no_mappings = 1
     
-time([[Setup for neoterm]], false)
-time([[packadd for neoterm]], true)
-vim.cmd [[packadd neoterm]]
-time([[packadd for neoterm]], false)
+time([[Setup for vim-slime]], false)
+time([[packadd for vim-slime]], true)
+vim.cmd [[packadd vim-slime]]
+time([[packadd for vim-slime]], false)
 -- Setup for: vim-headerguard
 time([[Setup for vim-headerguard]], true)
       vim.g.headerguard_use_cpp_comments = 1
@@ -469,18 +542,18 @@ time([[packadd for ranger.vim]], false)
 time([[Config for gitsigns.nvim]], true)
 require('config.gitsigns')
 time([[Config for gitsigns.nvim]], false)
--- Config for: lualine.nvim
-time([[Config for lualine.nvim]], true)
-require('config.lualine')
-time([[Config for lualine.nvim]], false)
+-- Config for: vim-prosession
+time([[Config for vim-prosession]], true)
+require('config.prosession')
+time([[Config for vim-prosession]], false)
 -- Config for: LuaSnip
 time([[Config for LuaSnip]], true)
 require('config.luasnip')
 time([[Config for LuaSnip]], false)
--- Config for: nvim-comment
-time([[Config for nvim-comment]], true)
-require('config.comment')
-time([[Config for nvim-comment]], false)
+-- Config for: lualine.nvim
+time([[Config for lualine.nvim]], true)
+require('config.lualine')
+time([[Config for lualine.nvim]], false)
 -- Config for: nvim-bufferline.lua
 time([[Config for nvim-bufferline.lua]], true)
 require('config.bufferline')
@@ -497,10 +570,10 @@ time([[Config for indent-blankline.nvim]], false)
 time([[Config for nvim-treesitter]], true)
 require('config.treesitter')
 time([[Config for nvim-treesitter]], false)
--- Config for: vim-prosession
-time([[Config for vim-prosession]], true)
-require('config.prosession')
-time([[Config for vim-prosession]], false)
+-- Config for: nvim-comment
+time([[Config for nvim-comment]], true)
+require('config.comment')
+time([[Config for nvim-comment]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)

@@ -167,19 +167,37 @@ packer.startup(function()
   use "chrisbra/csv.vim"
 
   -- REPL manager
+  -- use {
+  --   "kassio/neoterm",
+  --   setup = [[
+  --     local g = vim.g
+  --     g.neoterm_autoscroll = true
+  --     -- g.neoterm_bracketed_paste = true
+  --     g.neoterm_default_mod = 'vertical'
+  --     g.neoterm_fixedsize = false
+  --     -- g.neoterm_repl_python = "python"
+  --     g.neoterm_repl_enable_ipython_paste_magic = true
+  --     g.neoterm_repl_r = 'radian'
+  --   ]],
+  -- }
+
   use {
-    "kassio/neoterm",
+    "jpalardy/vim-slime",
     setup = [[
-      local g = vim.g
-      g.neoterm_autoscroll = true
-      g.neoterm_bracketed_paste = true
-      g.neoterm_default_mod = 'vertical'
-      g.neoterm_fixedsize = false
-      -- g.neoterm_repl_python = "python"
-      g.neoterm_repl_enable_ipython_paste_magic = true
-      g.neoterm_repl_r = 'radian'
-      --g.neoterm_size = 80
-    ]],
+      vim.g.slime_target = "neovim"
+      vim.g.slime_no_mappings = 1
+    ]]
+  }
+
+  use {
+    "drmikehenry/vim-headerguard",
+    setup = [[
+      vim.g.headerguard_use_cpp_comments = 1
+    ]]
+  }
+
+  use {
+    "lambdalisue/vim-pyenv"
   }
 
   --   -- R
@@ -277,6 +295,7 @@ packer.startup(function()
       "hrsh7th/cmp-nvim-lsp",
       { "hrsh7th/cmp-path", after = "nvim-cmp" },
       { "hrsh7th/cmp-nvim-lua", after = "nvim-cmp" },
+      { "hrsh7th/cmp-cmdline", after = "nvim-cmp" },
       { "saadparwaiz1/cmp_luasnip", after = "nvim-cmp" },
     },
     config = [[require('config.cmp')]],
