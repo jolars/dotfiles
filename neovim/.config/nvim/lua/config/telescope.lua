@@ -1,24 +1,25 @@
-local telescope = require 'telescope'
+local telescope = require "telescope"
 
 telescope.setup {
-  defaults = {layout_strategy = 'flex', scroll_strategy = 'cycle'},
+  defaults = { layout_strategy = "flex", scroll_strategy = "cycle" },
   extensions = {
     fzf = {
       fuzzy = true,
       override_generic_sorter = true,
       override_file_sorter = true,
-      case_mode = "smart_case"
-    }
+      case_mode = "smart_case",
+    },
   },
   pickers = {
     -- lsp_references = { theme = 'dropdown' },
-    spell_suggest = {theme = 'dropdown'},
+    spell_suggest = { theme = "dropdown" },
     -- lsp_code_actions = {theme = 'dropdown'},
     -- lsp_definitions = { theme = 'dropdown' },
     -- lsp_implementations = { theme = 'dropdown' },
-    buffers = {sort_lastused = true, theme = 'dropdown'}
-  }
+    buffers = { sort_lastused = true, theme = "dropdown" },
+    find_files = { hidden = true },
+  },
 }
 -- Extensions
-telescope.load_extension('fzf')
-telescope.load_extension('media_files')
+telescope.load_extension "fzf"
+telescope.load_extension "media_files"
