@@ -19,7 +19,7 @@ g.maplocalleader = [[,]]
 map("n", "<leader>w", "<cmd>w<cr>", silent) -- Write buffer
 map("n", "<leader>x", "<cmd>x!<cr>", silent) -- Write buffer
 map("n", "<leader>q", "<cmd>q<cr>", silent) -- Quit buffer
-map("n", "<leader>d", "<cmd>BD!<cr>", silent_nowait) -- Delete buffer
+map("n", "<leader>d", "<cmd>Sayonara!<cr>", silent_nowait) -- Delete buffer
 
 -- Yank into clipboard
 map("n", "<leader>y", '"+y', silent)
