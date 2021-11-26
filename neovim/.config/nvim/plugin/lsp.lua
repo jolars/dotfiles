@@ -61,9 +61,9 @@ local on_attach = function(client, bufnr)
   buf_set_keymap(
     "n",
     "gd",
-    [[<cmd>lua require"telescope.builtin".lsp_definitions(
-                   require('telescope.themes').get_dropdown()
-                 )<CR>]],
+    [[
+      <cmd>lua require"telescope.builtin".lsp_definitions(require('telescope.themes').get_dropdown())<CR>
+    ]],
     opts
   )
   buf_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
@@ -83,9 +83,9 @@ local on_attach = function(client, bufnr)
   buf_set_keymap(
     "n",
     "gA",
-    [[<cmd>lua require"telescope.builtin".lsp_code_actions(
-                  require('telescope.themes').get_cursor()
-                )<cr>]],
+    [[
+      <cmd>lua require"telescope.builtin".lsp_code_actions(require('telescope.themes').get_cursor())<cr>
+    ]],
     opts
   )
   buf_set_keymap(
@@ -141,7 +141,9 @@ local servers = {
   clangd = {},
   texlab = {},
   pyright = { settings = { python = { formatting = { provider = "yapf" } } } },
-  r_language_server = {},
+  r_language_server = {
+    settings = { filetypes = { "r", "rmd", "rmarkdown", "Rmd", "R" } },
+  },
   julials = {},
   vimls = {},
   sumneko_lua = {
@@ -162,6 +164,7 @@ client_capabilities.textDocument.completion.completionItem.snippetSupport = true
 client_capabilities.textDocument.completion.completionItem.resolveSupport = {
   properties = { "documentation", "detail", "additionalTextEdits" },
 }
+
 client_capabilities = require("cmp_nvim_lsp").update_capabilities(
   client_capabilities
 )
