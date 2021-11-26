@@ -7,6 +7,7 @@ font pango:DejaVu Sans 10
 
 # picom (compositing)
 exec --no-startup-id picom
+exec --no-startup-id hsetroot -solid "black" # make background black
 
 # redshift
 exec --no-startup-id /usr/libexec/geoclue-2.0/demos/agent
@@ -19,13 +20,15 @@ exec --no-startup-id autorandr --change
 
 exec --no-startup-id redshift
 
+exec --no-startup-id setxkbmap -option compose:rwin
+
 # STARTUP UTILITIES
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 # exec --no-startup-id xset s 360
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- lock --nofork
-exec --no-startup-id xautolock -time 8 -locker lock
+exec --no-startup-id xautolock -time 8 -locker i3lock -c 0000ff
 # exec --no-startup-id xautolock -time 2 -locker "systemctl suspend"
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -206,10 +209,10 @@ bindsym $mod+r mode "resize"
 # Bind Keys to shutdown, reboot, suspend, etc
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-  bindsym l exec --no-startup-id lock, mode "default"
+  bindsym l exec --no-startup-id i3-lock, mode "default"
   bindsym e exec --no-startup-id i3-msg exit, mode "default"
-  bindsym s exec --no-startup-id lock && systemctl suspend, mode "default"
-  bindsym h exec --no-startup-id lock && systemctl hibernate, mode "default"
+  bindsym s exec --no-startup-id i3-lock && systemctl suspend, mode "default"
+  bindsym h exec --no-startup-id i3-lock && systemctl hibernate, mode "default"
   bindsym r exec --no-startup-id systemctl reboot, mode "default"
   bindsym Shift+s exec --no-startup-id systemctl poweroff, mode "default"
 
