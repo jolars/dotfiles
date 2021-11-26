@@ -86,7 +86,7 @@ packer.startup(function()
     { "nvim-telescope/telescope-fzf-native.nvim", run = "make" },
   }
   -- Improve quickfix
-  use "kevinhwang91/nvim-bqf"
+  -- use "kevinhwang91/nvim-bqf"
 
   -- Start screen for neovim
   use "mhinz/vim-startify"
@@ -120,7 +120,8 @@ packer.startup(function()
   }
 
   -- Kill buffers without closing windows
-  use "qpkorr/vim-bufkill"
+  -- use "qpkorr/vim-bufkill"
+  use "mhinz/vim-sayonara"
 
   -- Dev-icons
   use "kyazdani42/nvim-web-devicons"
@@ -154,14 +155,14 @@ packer.startup(function()
   }
 
   -- File Manger
-  use "tpope/vim-vinegar"
-  use {
-    "francoiscabrol/ranger.vim",
-    setup = [[
-      vim.g.ranger_map_keys = 0
-    ]],
-    requires = "rbgrouleff/bclose.vim",
-  }
+  -- use "tpope/vim-vinegar"
+  -- use {
+  --   "francoiscabrol/ranger.vim",
+  --   setup = [[
+  --     vim.g.ranger_map_keys = 0
+  --   ]],
+  --   requires = "rbgrouleff/bclose.vim",
+  -- }
 
   -- Edit CSV files
   use "chrisbra/csv.vim"
@@ -232,7 +233,8 @@ packer.startup(function()
       g["pandoc#formatting#textwidth"] = 80
     ]],
   }
-  use "vim-pandoc/vim-rmarkdown"
+  -- use "vim-pandoc/vim-rmarkdown"
+  use "~/vim-plugins/vim-rmarkdown"
   use "vim-pandoc/vim-pandoc-syntax"
 
   use "dhruvasagar/vim-table-mode"
@@ -268,6 +270,7 @@ packer.startup(function()
     requires = {
       "nvim-treesitter/nvim-treesitter-refactor",
       -- 'nvim-treesitter/nvim-treesitter-textobjects',
+      "JoosepAlviste/nvim-ts-context-commentstring",
       "~/vim-plugins/nvim-treesitter-textobjects",
     },
     run = ":TSUpdate",
