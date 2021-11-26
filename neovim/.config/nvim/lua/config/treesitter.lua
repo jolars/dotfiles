@@ -24,6 +24,12 @@ require("nvim-treesitter.configs").setup {
     },
   },
   indent = { enable = true },
+  context_commentstring = {
+    enable = true,
+    config = {
+      r = "# %s",
+    },
+  },
   autopairs = { enable = true },
   textobjects = {
     select = {
