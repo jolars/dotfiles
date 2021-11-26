@@ -31,5 +31,8 @@
     "source_with_echo": true,
     "warn_variable_defined_but_not_used": true,
     "style_diagnostics": true,
-    "rmd_chunk_output_inline": false
+    "rmd_chunk_output_inline": false,
+    "rmd_viewer_type": "pane",
+    "insert_native_pipe_operator": true,
+    "editor_keybindings": "vim"
 }
