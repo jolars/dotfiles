@@ -80,11 +80,6 @@ _G.packer_plugins = {
     path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/ReplaceWithRegister",
     url = "https://github.com/vim-scripts/ReplaceWithRegister"
   },
-  ["bclose.vim"] = {
-    loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/bclose.vim",
-    url = "https://github.com/rbgrouleff/bclose.vim"
-  },
   ["cmp-buffer"] = {
     after_files = { "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/cmp-buffer/after/plugin/cmp_buffer.lua" },
     load_after = {
@@ -189,11 +184,6 @@ _G.packer_plugins = {
     path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/nvim-autopairs",
     url = "https://github.com/windwp/nvim-autopairs"
   },
-  ["nvim-bqf"] = {
-    loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/nvim-bqf",
-    url = "https://github.com/kevinhwang91/nvim-bqf"
-  },
   ["nvim-bufferline.lua"] = {
     config = { "require('config.bufferline')" },
     loaded = true,
@@ -201,7 +191,7 @@ _G.packer_plugins = {
     url = "https://github.com/akinsho/nvim-bufferline.lua"
   },
   ["nvim-cmp"] = {
-    after = { "cmp_luasnip", "nvim-autopairs", "cmp-nvim-lua", "cmp-cmdline", "cmp-buffer", "cmp-path" },
+    after = { "cmp_luasnip", "nvim-autopairs", "cmp-nvim-lua", "cmp-cmdline", "cmp-path", "cmp-buffer" },
     config = { "require('config.cmp')" },
     loaded = false,
     needs_bufread = false,
@@ -245,6 +235,11 @@ _G.packer_plugins = {
     path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects",
     url = "/home/gerd-jln/vim-plugins/nvim-treesitter-textobjects"
   },
+  ["nvim-ts-context-commentstring"] = {
+    loaded = true,
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
+    url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
+  },
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
@@ -269,12 +264,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
-  },
-  ["ranger.vim"] = {
-    loaded = true,
-    needs_bufread = false,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/opt/ranger.vim",
-    url = "https://github.com/francoiscabrol/ranger.vim"
   },
   ["registers.nvim"] = {
     keys = { { "n", '"' }, { "i", "<c-r>" } },
@@ -322,11 +311,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-argwrap",
     url = "https://github.com/FooSoft/vim-argwrap"
-  },
-  ["vim-bufkill"] = {
-    loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-bufkill",
-    url = "https://github.com/qpkorr/vim-bufkill"
   },
   ["vim-dispatch"] = {
     loaded = true,
@@ -404,7 +388,12 @@ _G.packer_plugins = {
   ["vim-rmarkdown"] = {
     loaded = true,
     path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-rmarkdown",
-    url = "https://github.com/vim-pandoc/vim-rmarkdown"
+    url = "/home/gerd-jln/vim-plugins/vim-rmarkdown"
+  },
+  ["vim-sayonara"] = {
+    loaded = true,
+    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-sayonara",
+    url = "https://github.com/mhinz/vim-sayonara"
   },
   ["vim-sleuth"] = {
     loaded = true,
@@ -446,11 +435,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-textobj-user",
     url = "https://github.com/kana/vim-textobj-user"
-  },
-  ["vim-vinegar"] = {
-    loaded = true,
-    path = "/home/gerd-jln/.local/share/nvim/site/pack/packer/start/vim-vinegar",
-    url = "https://github.com/tpope/vim-vinegar"
   },
   ["vim-wordmotion"] = {
     loaded = true,
@@ -494,15 +478,6 @@ if not vim.g.packer_custom_loader_enabled then
   vim.g.packer_custom_loader_enabled = true
 end
 
--- Setup for: vim-slime
-time([[Setup for vim-slime]], true)
-      vim.g.slime_target = "neovim"
-      vim.g.slime_no_mappings = 1
-    
-time([[Setup for vim-slime]], false)
-time([[packadd for vim-slime]], true)
-vim.cmd [[packadd vim-slime]]
-time([[packadd for vim-slime]], false)
 -- Setup for: vim-headerguard
 time([[Setup for vim-headerguard]], true)
       vim.g.headerguard_use_cpp_comments = 1
@@ -518,6 +493,15 @@ time([[Setup for vimtex]], false)
 time([[packadd for vimtex]], true)
 vim.cmd [[packadd vimtex]]
 time([[packadd for vimtex]], false)
+-- Setup for: vim-slime
+time([[Setup for vim-slime]], true)
+      vim.g.slime_target = "neovim"
+      vim.g.slime_no_mappings = 1
+    
+time([[Setup for vim-slime]], false)
+time([[packadd for vim-slime]], true)
+vim.cmd [[packadd vim-slime]]
+time([[packadd for vim-slime]], false)
 -- Setup for: vim-pandoc
 time([[Setup for vim-pandoc]], true)
       local g = vim.g
@@ -530,14 +514,6 @@ time([[Setup for vim-pandoc]], false)
 time([[packadd for vim-pandoc]], true)
 vim.cmd [[packadd vim-pandoc]]
 time([[packadd for vim-pandoc]], false)
--- Setup for: ranger.vim
-time([[Setup for ranger.vim]], true)
-      vim.g.ranger_map_keys = 0
-    
-time([[Setup for ranger.vim]], false)
-time([[packadd for ranger.vim]], true)
-vim.cmd [[packadd ranger.vim]]
-time([[packadd for ranger.vim]], false)
 -- Config for: gitsigns.nvim
 time([[Config for gitsigns.nvim]], true)
 require('config.gitsigns')
@@ -582,8 +558,8 @@ time([[Defining lazy-load commands]], false)
 
 -- Keymap lazy-loads
 time([[Defining lazy-load keymaps]], true)
-vim.cmd [[nnoremap <silent> " <cmd>lua require("packer.load")({'registers.nvim'}, { keys = "\"", prefix = "" }, _G.packer_plugins)<cr>]]
 vim.cmd [[inoremap <silent> <c-r> <cmd>lua require("packer.load")({'registers.nvim'}, { keys = "<lt>c-r>" }, _G.packer_plugins)<cr>]]
+vim.cmd [[nnoremap <silent> " <cmd>lua require("packer.load")({'registers.nvim'}, { keys = "\"", prefix = "" }, _G.packer_plugins)<cr>]]
 time([[Defining lazy-load keymaps]], false)
 
 vim.cmd [[augroup packer_load_aucmds]]
