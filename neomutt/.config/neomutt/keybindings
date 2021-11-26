@@ -28,7 +28,7 @@ macro index,pager as "<change-folder>=studentlu/INBOX<enter>"
 folder-hook =outlook source ~/.config/neomutt/accounts/outlook
 folder-hook =gmail source ~/.config/neomutt/accounts/gmail
 folder-hook =statlu source ~/.config/neomutt/accounts/stat-lu
-folder-hook =studentlu source ~/.config/neomutt/accounts/stat-lu
+folder-hook =studentlu source ~/.config/neomutt/accounts/student-lu
 
 # Synchronize mail
 macro index S "<enter-command>unset wait_key<enter><shell-escape>mbsync -a<enter><shell-escape>notmuch new<enter>" "sync email"
