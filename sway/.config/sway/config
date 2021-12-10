@@ -19,7 +19,7 @@ input "type:keyboard" {
 exec_always "systemctl --user import-environment; systemctl --user start sway-session.target"
 
 # mako 
-exec mako
+exec dunst
 
 # redshift
 exec /usr/libexec/geoclue-2.0/demos/agent
