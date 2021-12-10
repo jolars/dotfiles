@@ -34,5 +34,9 @@
     "rmd_chunk_output_inline": false,
     "rmd_viewer_type": "pane",
     "insert_native_pipe_operator": true,
-    "editor_keybindings": "vim"
+    "editor_keybindings": "vim",
+    "latex_preview_on_cursor_idle": "never",
+    "python_type": "system",
+    "python_version": "3.9.7",
+    "python_path": "~/.pyenv/versions/3.9.7/bin/python"
 }
