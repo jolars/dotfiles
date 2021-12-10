@@ -91,5 +91,7 @@ set message_cachedir = "~/.cache/mutt/bodies/"
 
 # set query_command = "khard email --parsable %s"
 set query_command = "notmuch address %s"
+# set query_command = "echo '' && notmuch address /%s/"
+set query_format="%4c %t %-70.70a %-70.70n %?e?(%e)?"
 
 # set query_command = "khard email --parsable --search-in-source-files '%s'"
